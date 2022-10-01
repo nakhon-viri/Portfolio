@@ -116,18 +116,17 @@ const Portfolio: NextPage = () => {
                   management system.
                 </div>
               </div>
-              <div
-                onClick={() => openImage("grand", 6)}
-                className=" flex cursor-pointer w-full h-52 md:h-auto  container"
-              >
-                <Image
-                  src="/img/grand1.png"
-                  layout="fill"
-                  className="border transition duration-150  ease-linear image"
+              <div className="flex cursor-pointer container">
+                <img
+                  className="border w-full h-auto transition duration-150  ease-linear image"
+                  src="img/grand1.png"
                 />
                 <div className="overlay flex justify-center items-center">
-                  <div className=" text-center text-white px-6 py-3 border select-none">
-                    View more
+                  <div
+                    onClick={() => openImage("grand", 6)}
+                    className=" text-center text-white px-6 py-3 border select-none"
+                  >
+                    View
                   </div>
                 </div>
               </div>
@@ -147,18 +146,17 @@ const Portfolio: NextPage = () => {
                   programing.
                 </div>
               </div>
-              <div className=" flex cursor-pointer h-52 md:h-auto container">
-                <Image
-                  src="/img/image2.png"
-                  layout="fill"
+              <div className=" flex cursor-pointer container">
+                <img
                   className="border w-full h-auto transition duration-150  ease-linear image"
+                  src="img/image2.png"
                 />
                 <div className="overlay flex justify-center items-center">
                   <div
                     onClick={() => openImage("image", 3)}
                     className=" text-center text-white px-6 py-3 border select-none"
                   >
-                    View more
+                    View
                   </div>
                 </div>
               </div>

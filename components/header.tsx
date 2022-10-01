@@ -32,7 +32,6 @@ const Header: React.FC = () => {
               className={
                 router.asPath == "/portfolio" ? " text-emerald-200" : ""
               }
-              href="/portfolio"
             >
               Portfolio
             </a>
@@ -58,7 +57,6 @@ const Header: React.FC = () => {
           </div>
           <Link href="/">
             <a
-              href="/"
               className={
                 router.asPath == "/" ? " text-emerald-400" : "text-gray-600"
               }

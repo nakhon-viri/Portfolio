@@ -107,7 +107,7 @@ const Home: NextPage = () => {
                 :
                 <Link href={"https://github.com/nakhon-viri"}>
                   <a className="text-blue-500 cursor-pointer hover:underline hover:decoration-1 underline-offset-2">
-                    Neko&Cat (nakhon-viri)
+                    Neko&amp;Cat (nakhon-viri)
                   </a>
                 </Link>
               </div>
