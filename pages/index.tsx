@@ -39,13 +39,13 @@ const Home: NextPage = () => {
         <div className="gap-20 max-w-7xl flex md:flex-1 flex-col md:flex-row justify-center items-center pt-20 z-10">
           <div className="md:w-1/2 flex justify-end">
             <div className=" bg-emerald-100 shadow-2xl flex w-fit flex-col items-center justify-center px-8 md:px-20 py-16  gap-10">
-              <Image
+              {/* <Image
                 src="/me.jpg"
                 width={240}
                 height={240}
                 className="rounded-full"
-              />
-              {/* <img className=" w-60 h-60 rounded-full " src="Me.jpg" /> */}
+              /> */}
+              <img className=" w-60 h-60 rounded-full " src="Me.jpg" />
               <h1 className=" text-3xl  font-bold text-center">
                 Nakhon <br /> Viriyarodjanawut
               </h1>
