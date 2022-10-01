@@ -22,7 +22,7 @@ const Resume: NextPage = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="w-full bg-green-200 flex items-center justify-center pt-40 md:pt-52 p-5">
+      <div className="w-full bg-green-200 flex items-center justify-center pt-40 md:pt-52 p-5 pb-40">
         <div className=" max-w-3xl ">
           <h1 className=" flex items-center justify-center gap-2 text-4xl font-bold mb-14">
             <span className=" text-emerald-400">
@@ -40,8 +40,11 @@ const Resume: NextPage = () => {
                   <h1 className="text-2xl font-bold ">Programming language</h1>
                   <br />
                   <div className="grid grid-cols-2 w-full justify-start items-start gap-y-10 ">
-                    {ProLang.map((item) => (
-                      <li className="text-lg flex items-center gap-2">
+                    {ProLang.map((item, index) => (
+                      <li
+                        key={index}
+                        className="text-lg flex items-center gap-2"
+                      >
                         <span className="text-sm text-emerald-400">
                           <GrStatusInfoSmall />
                         </span>
@@ -54,8 +57,11 @@ const Resume: NextPage = () => {
                   <h1 className="text-2xl font-bold ">Framework</h1>
                   <br />
                   <ul className="grid grid-cols-2 w-full justify-start items-start gap-y-10 ">
-                    {Framework.map((item) => (
-                      <li className="text-lg flex items-center gap-2">
+                    {Framework.map((item, index) => (
+                      <li
+                        key={index}
+                        className="text-lg flex items-center gap-2"
+                      >
                         <span className="text-sm text-emerald-400">
                           <GrStatusInfoSmall />
                         </span>

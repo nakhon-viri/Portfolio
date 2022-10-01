@@ -70,7 +70,7 @@ const portfolio: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Resume</title>
+        <title>Portfolio</title>
         <meta
           name="description"
           content="Portfolio by Nakhon Viriyarodjanawut"
@@ -79,25 +79,19 @@ const portfolio: NextPage = () => {
       </Head>
       {viewImage ? <ShowListImage /> : null}
       <div
-        className={`w-full bg-green-200 flex items-center justify-center pt-40 md:pt-52 p-5 ${
+        className={`w-full bg-green-200 flex items-center justify-center pt-40 md:pt-52 p-5 pb-40 ${
           viewImage ? "h-screen overflow-hidden" : ""
         }`}
       >
-        <div className="max-w-4xl">
-          <h1 className=" flex items-center justify-center gap-2 text-4xl font-bold mb-14">
+        <div className="flex flex-col gap-14 max-w-4xl">
+          <h1 className=" flex items-center justify-center gap-2 text-4xl font-bold ">
             <span className=" text-emerald-400">
               <GrStatusCriticalSmall />
             </span>
             Portfolio
           </h1>
-          <h1 className="text-center">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
-            quas doloremque nesciunt quaerat, dolores minima quod possimus!
-            Alias sequi rem quidem repellendus, temporibus corrupti, officiis
-            nobis recusandae aliquid minima quis!
-          </h1>
           <div className="flex flex-col gap-12 child:min-h-[286px]">
-            <div className=" bg-white grid grid-cols-1 md:grid-cols-2 shadow-2xl">
+            <div className=" bg-white gap-5 md:gap-0 grid grid-cols-1 md:grid-cols-2 shadow-2xl">
               <div>
                 <div className="pt-12 pb-8">
                   <div className=" border-l-[10px] border-emerald-400  pl-6 ">
@@ -129,7 +123,7 @@ const portfolio: NextPage = () => {
                 </div>
               </div>
             </div>
-            <div className=" bg-white grid grid-cols-1 md:grid-cols-2 shadow-2xl">
+            <div className=" bg-white grid grid-cols-1  gap-5 md:gap-0 md:grid-cols-2 shadow-2xl">
               <div>
                 <div className="pt-12 pb-8">
                   <div className=" border-l-[10px] border-emerald-400  pl-6 ">
