@@ -4,24 +4,26 @@ import { FaFacebookF, FaGithub } from "react-icons/fa";
 import { HiMail } from "react-icons/hi";
 import { GiRotaryPhone } from "react-icons/gi";
 import Link from "next/link";
-// import ReactTextTransition, { presets } from "react-text-transition";
+import Image from "next/image";
+
+import ReactTextTransition, { presets } from "react-text-transition";
 
 import { useEffect, useState } from "react";
 
 const Home: NextPage = () => {
-  // const texts = ["Nakhon", "Web developer", "Back-end dev"];
+  const texts = ["Nakhon", "Web developer", "Back-end dev"];
 
-  // const [textIndex, setTextIndex] = useState(0);
+  const [textIndex, setTextIndex] = useState(0);
 
-  // useEffect(() => {
-  //   let interval = setInterval(() => {
-  //     setTextIndex((t) => t + 1);
-  //   }, 1500);
+  useEffect(() => {
+    let interval = setInterval(() => {
+      setTextIndex((t) => t + 1);
+    }, 1500);
 
-  //   return () => {
-  //     clearInterval(interval);
-  //   };
-  // }, []);
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
 
   return (
     <>
@@ -37,7 +39,13 @@ const Home: NextPage = () => {
         <div className="gap-20 max-w-7xl flex md:flex-1 flex-col md:flex-row justify-center items-center pt-20 z-10">
           <div className="md:w-1/2 flex justify-end">
             <div className=" bg-emerald-100 shadow-2xl flex w-fit flex-col items-center justify-center px-8 md:px-20 py-16  gap-10">
-              <img className=" w-60 h-60 rounded-full " src="Me.jpg" />
+              <Image
+                src="/me.jpg"
+                width={240}
+                height={240}
+                className="rounded-full"
+              />
+              {/* <img className=" w-60 h-60 rounded-full " src="Me.jpg" /> */}
               <h1 className=" text-3xl  font-bold text-center">
                 Nakhon <br /> Viriyarodjanawut
               </h1>
@@ -52,10 +60,10 @@ const Home: NextPage = () => {
             <h1 className="text-5xl md:text-8xl font-bold mb-5 md:mb-0">
               Hello, I'm
               <span className=" text-emerald-300 text-5xl">
-                {/* <ReactTextTransition
+                <ReactTextTransition
                   springConfig={presets.gentle}
                   children={texts[textIndex % texts.length]}
-                /> */}
+                />
               </span>
             </h1>
             <div className="flex gap-10 child:cursor-pointer">

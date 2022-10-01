@@ -2,7 +2,6 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { BiMenu } from "react-icons/bi";
 import { GrClose } from "react-icons/gr";
-import NavLink from "./navLink";
 import { useRouter } from "next/router";
 
 const Header: React.FC = () => {
@@ -16,24 +15,28 @@ const Header: React.FC = () => {
           <div>Nakhon</div>
         </div>
         <div className="md:flex text-2xl items-center gap-3 hidden">
-          <a
-            className={router.asPath == "/" ? " text-emerald-200" : ""}
-            href="/"
-          >
-            Home
-          </a>
-          <a
-            className={router.asPath == "/resume" ? " text-emerald-200" : ""}
-            href="/resume"
-          >
-            Resume
-          </a>
-          <a
-            className={router.asPath == "/portfolio" ? " text-emerald-200" : ""}
-            href="/portfolio"
-          >
-            Portfolio
-          </a>
+          <Link href="/">
+            <a className={router.asPath == "/" ? " text-emerald-200" : ""}>
+              Home
+            </a>
+          </Link>
+          <Link href="/resume">
+            <a
+              className={router.asPath == "/resume" ? " text-emerald-200" : ""}
+            >
+              Resume
+            </a>
+          </Link>
+          <Link href="/portfolio">
+            <a
+              className={
+                router.asPath == "/portfolio" ? " text-emerald-200" : ""
+              }
+              href="/portfolio"
+            >
+              Portfolio
+            </a>
+          </Link>
         </div>
         <div
           onClick={() => setMenu(true)}
@@ -53,35 +56,41 @@ const Header: React.FC = () => {
           >
             <GrClose />
           </div>
-          <a
-            href="/"
-            className={
-              router.asPath == "/" ? " text-emerald-400" : "text-gray-600"
-            }
-            onClick={() => setMenu(false)}
-          >
-            Home
-          </a>
-          <a
-            className={
-              router.asPath == "/resume" ? " text-emerald-400" : "text-gray-600"
-            }
-            href="/resume"
-            onClick={() => setMenu(false)}
-          >
-            Resume
-          </a>
-          <a
-            className={
-              router.asPath == "/portfolio"
-                ? " text-emerald-400"
-                : "text-gray-600"
-            }
-            href="/portfolio"
-            onClick={() => setMenu(false)}
-          >
-            Portfolio
-          </a>
+          <Link href="/">
+            <a
+              href="/"
+              className={
+                router.asPath == "/" ? " text-emerald-400" : "text-gray-600"
+              }
+              onClick={() => setMenu(false)}
+            >
+              Home
+            </a>
+          </Link>
+          <Link href="/resume">
+            <a
+              className={
+                router.asPath == "/resume"
+                  ? " text-emerald-400"
+                  : "text-gray-600"
+              }
+              onClick={() => setMenu(false)}
+            >
+              Resume
+            </a>
+          </Link>
+          <Link href="/portfolio">
+            <a
+              className={
+                router.asPath == "/portfolio"
+                  ? " text-emerald-400"
+                  : "text-gray-600"
+              }
+              onClick={() => setMenu(false)}
+            >
+              Portfolio
+            </a>
+          </Link>
         </div>
       </div>
     </div>

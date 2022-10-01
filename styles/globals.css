@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -26,7 +26,7 @@
   background-color: black;
 }
 .container:hover .overlay {
-  opacity: 0.75;
+  opacity: 0.6;
 }
 .container:hover .image {
   transform: scale(1.1);
@@ -49,6 +49,13 @@
 
 /* For IE, Edge and Firefox */
 .scrollbar-hide {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+img {
+  position: static !important;
+}
+.setimage > span {
+  position: static !important;
 }

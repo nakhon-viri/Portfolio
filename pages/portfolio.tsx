@@ -1,16 +1,17 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { GrStatusCriticalSmall, GrClose } from "react-icons/gr";
 import { BsCaretLeftFill, BsFillCaretRightFill } from "react-icons/bs";
-const portfolio: NextPage = () => {
+import Image from "next/image";
+const Portfolio: NextPage = () => {
   const ProLang = ["JavaScript", "TypeScript", "CSS", "HTML", "C", "C#"];
 
   const [viewImage, setViewImage] = useState<boolean>(false);
 
   const [orderImage, setOrderImage] = useState<number>(1);
 
-  const [nameImage, setNameImage] = useState<string>("");
+  const [nameImage, setNameImage] = useState<string>("image");
 
   const [countImage, setCountImage] = useState<number>(1);
 
@@ -22,6 +23,13 @@ const portfolio: NextPage = () => {
       return p - 1;
     });
   };
+
+  // useEffect(() => {
+  //   var allBodyTag = document.body.getElementsByTagName("img");
+  //   for (var i = 0; i < allBodyTag.length; i++) {
+  //     allBodyTag[i].removeAttribute("style");
+  //   }
+  // }, []);
 
   const ShowListImage = () => {
     return (
@@ -110,15 +118,16 @@ const portfolio: NextPage = () => {
               </div>
               <div
                 onClick={() => openImage("grand", 6)}
-                className=" flex cursor-pointer container"
+                className=" flex cursor-pointer w-full h-52 md:h-auto  container"
               >
-                <img
-                  className="border w-full h-auto transition duration-150  ease-linear image"
-                  src="img/grand1.png"
+                <Image
+                  src="/img/grand1.png"
+                  layout="fill"
+                  className="border transition duration-150  ease-linear image"
                 />
                 <div className="overlay flex justify-center items-center">
                   <div className=" text-center text-white px-6 py-3 border select-none">
-                    View
+                    View more
                   </div>
                 </div>
               </div>
@@ -138,17 +147,18 @@ const portfolio: NextPage = () => {
                   programing.
                 </div>
               </div>
-              <div className=" flex cursor-pointer container">
-                <img
+              <div className=" flex cursor-pointer h-52 md:h-auto container">
+                <Image
+                  src="/img/image2.png"
+                  layout="fill"
                   className="border w-full h-auto transition duration-150  ease-linear image"
-                  src="img/image2.png"
                 />
                 <div className="overlay flex justify-center items-center">
                   <div
                     onClick={() => openImage("image", 3)}
                     className=" text-center text-white px-6 py-3 border select-none"
                   >
-                    View
+                    View more
                   </div>
                 </div>
               </div>
@@ -160,4 +170,4 @@ const portfolio: NextPage = () => {
   );
 };
 
-export default portfolio;
+export default Portfolio;
