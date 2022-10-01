@@ -33,7 +33,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="w-full flex items-center justify-center md:absolute md:top-0 md:bottom-0 md:ring-0 md:left-0 pt-24 p-5">
-        <div className=" max-w-7xl flex flex-col-reverse md:flex-row justify-center items-center md:gap-24">
+        {/* <div className=" max-w-7xl flex flex-col-reverse md:flex-row justify-center items-center md:gap-24 p-5">
           <div className=" flex flex-col">
             <span className="text-3xl md:order-2 md:text-6xl font-bold mb-10">
               Hello, I'm <br className="md:hidden" />
@@ -67,14 +67,13 @@ const Home: NextPage = () => {
               src="https://cdn.pixabay.com/photo/2014/11/30/14/11/cat-551554_960_720.jpg"
             />
           </div>
-        </div>
+        </div> */}
 
-        {/* <div className="gap-20 max-w-7xl flex items-center justify-center pt-20 z-10">
+        <div className="gap-20 max-w-7xl flex items-center justify-center pt-20 z-10">
           <div className=" bg-emerald-100 shadow-2xl flex  flex-col items-center justify-center px-20 py-16  gap-10">
             <img
               className=" w-60 h-60 rounded-full "
-              src="https://cdn.pixabay.com/photo/2014/11/30/14/11/cat-551554_960_720.jpg"
-              alt=""
+              src="Me.jpg"
             />
             <h1 className=" text-3xl  font-bold text-center">
               Nakhon <br /> Viriyarodjanawut
@@ -82,10 +81,10 @@ const Home: NextPage = () => {
 
             <div className=" w-16 h-[2px] bg-black"></div>
 
-            <div className="uppercase text-2xl">Web developer</div>
+            <h1 className="uppercase text-2xl">Web developer</h1>
           </div>
           <div className="select-none">
-            <p className=" text-8xl font-bold">Hello</p>
+            <h1 className=" text-8xl font-bold">Hello</h1>
             <ReactTextTransition
               springConfig={presets.gentle}
               className="big"
@@ -136,7 +135,7 @@ const Home: NextPage = () => {
             </div>
           </div>
         </div>
-        <div className=" absolute left-0 top-0 bottom-0 w-2/5 bg-green-200"></div> */}
+        <div className=" absolute left-0 top-0 bottom-0 w-2/5 bg-green-200"></div>
       </div>
     </>
   );

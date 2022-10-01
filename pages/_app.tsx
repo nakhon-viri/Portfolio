@@ -4,9 +4,11 @@ import Header from "../components/header";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <div className="  ">
-      <Header />
-      <Component {...pageProps} />
+    <div className="font-Poppins">
+      <>
+        <Header />
+        <Component {...pageProps} />
+      </>
     </div>
   );
 }
