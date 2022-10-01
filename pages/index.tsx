@@ -58,7 +58,7 @@ const Home: NextPage = () => {
 
           <div className="select-none flex flex-col gap-10 md:w-1/2">
             <h1 className="text-5xl md:text-8xl font-bold mb-5 md:mb-0">
-              Hello, I&apos;m
+              Hello, I&apos;m <br />
               <span className=" text-emerald-300 text-5xl">
                 {/* <ReactTextTransition
                   springConfig={presets.gentle}
