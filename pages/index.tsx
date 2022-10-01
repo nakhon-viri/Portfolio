@@ -11,19 +11,19 @@ import ReactTextTransition, { presets } from "react-text-transition";
 import { useEffect, useState } from "react";
 
 const Home: NextPage = () => {
-  const texts = ["Nakhon", "Web developer", "Back-end dev"];
+  // const texts = ["Nakhon", "Web developer", "Back-end dev"];
 
-  const [textIndex, setTextIndex] = useState(0);
+  // const [textIndex, setTextIndex] = useState(0);
 
-  useEffect(() => {
-    let interval = setInterval(() => {
-      setTextIndex((t) => t + 1);
-    }, 1500);
+  // useEffect(() => {
+  //   let interval = setInterval(() => {
+  //     setTextIndex((t) => t + 1);
+  //   }, 1500);
 
-    return () => {
-      clearInterval(interval);
-    };
-  }, []);
+  //   return () => {
+  //     clearInterval(interval);
+  //   };
+  // }, []);
 
   return (
     <>
@@ -58,12 +58,13 @@ const Home: NextPage = () => {
 
           <div className="select-none flex flex-col gap-10 md:w-1/2">
             <h1 className="text-5xl md:text-8xl font-bold mb-5 md:mb-0">
-              Hello, I'm
+              Hello, I&apos;m
               <span className=" text-emerald-300 text-5xl">
-                <ReactTextTransition
+                {/* <ReactTextTransition
                   springConfig={presets.gentle}
                   children={texts[textIndex % texts.length]}
-                />
+                /> */}
+                Web developer
               </span>
             </h1>
             <div className="flex gap-10 child:cursor-pointer">
