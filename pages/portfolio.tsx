@@ -15,6 +15,8 @@ const Portfolio: NextPage = () => {
 
   const [countImage, setCountImage] = useState<number>(1);
 
+  const [porjectName, setPorjectName] = useState("");
+
   const handleOrderImage = (order: boolean) => {
     setOrderImage((p) => {
       if (p == countImage && order) return 1;
@@ -22,6 +24,8 @@ const Portfolio: NextPage = () => {
       if (order) return p + 1;
       return p - 1;
     });
+    // console.log(`img/${nameImage + "" + orderImage}.png`);
+    
   };
 
   // useEffect(() => {
@@ -46,7 +50,7 @@ const Portfolio: NextPage = () => {
             <GrClose />
           </div>
           <h1 className="text-3xl pt-10 font-semibold border-t-[10px] border-emerald-300 w-fit text-emerald-300">
-            Subject
+            {porjectName}
           </h1>
           <div className="flex justify-center items-center gap-5 odd:text-5xl odd:p-2 p-10 odd:cursor-pointer odd:text-emerald-200">
             <i
@@ -69,10 +73,11 @@ const Portfolio: NextPage = () => {
     );
   };
 
-  const openImage = (image: string, count: number) => {
+  const openImage = (image: string, count: number, name: string) => {
     setViewImage(true);
     setCountImage(count);
     setNameImage(image);
+    setPorjectName(name);
   };
 
   return (
@@ -123,7 +128,13 @@ const Portfolio: NextPage = () => {
                 />
                 <div className="overlay flex justify-center items-center">
                   <div
-                    onClick={() => openImage("grand", 6)}
+                    onClick={() =>
+                      openImage(
+                        "grand",
+                        6,
+                        "Website Transportation Management System"
+                      )
+                    }
                     className=" text-center text-white px-6 py-3 border select-none"
                   >
                     View
@@ -153,7 +164,9 @@ const Portfolio: NextPage = () => {
                 />
                 <div className="overlay flex justify-center items-center">
                   <div
-                    onClick={() => openImage("image", 3)}
+                    onClick={() =>
+                      openImage("image", 3, "Stock windows application")
+                    }
                     className=" text-center text-white px-6 py-3 border select-none"
                   >
                     View
