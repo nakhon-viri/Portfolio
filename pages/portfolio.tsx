@@ -20,7 +20,7 @@ const Portfolio: NextPage = () => {
   const handleOrderImage = (order: boolean) => {
     setOrderImage((p) => {
       if (p == countImage && order) return 1;
-      if (p == 1 && !order) return 3;
+      if (p == 1 && !order) return countImage;
       if (order) return p + 1;
       return p - 1;
     });
