@@ -24,8 +24,7 @@ const Portfolio: NextPage = () => {
       if (order) return p + 1;
       return p - 1;
     });
-    // console.log(`img/${nameImage + "" + orderImage}.png`);
-    
+    console.log(`img/${nameImage + "" + orderImage}.png`);
   };
 
   // useEffect(() => {
@@ -78,6 +77,7 @@ const Portfolio: NextPage = () => {
     setCountImage(count);
     setNameImage(image);
     setPorjectName(name);
+    setOrderImage(1);
   };
 
   return (
